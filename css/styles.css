@@ -48,6 +48,8 @@ a {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 /* #endregion */
 
@@ -79,11 +81,13 @@ img {
 .team-list,
 .portfolio-list {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
 }
 
 .sub-heading {
+    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -121,9 +125,9 @@ img {
 
 .card-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     gap: 8px;
     line-height: 0;
 }
@@ -265,7 +269,7 @@ img {
 /* #region About */
 .about-item {
     display: flex;
-    width: 264px;
+    width: calc((100% - 24px * 3) / 4);
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
@@ -297,7 +301,7 @@ img {
 
 /* #region Section Portfolio */
 .portfolio-card {
-    /* margin: 0; Find out why where is 3.5px between the img and card-content */
+    margin: 0;
     width: calc((100% - 24px * 2) / 3);
 }
 
@@ -315,9 +319,16 @@ img {
     background-color: var(--navy-blue);
 }
 
+.footer .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .footer-txt {
+    width: 264px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud);
+    margin-top: 16px;
 }
 /* #endregion */
